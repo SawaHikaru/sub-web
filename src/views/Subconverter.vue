@@ -256,6 +256,7 @@ export default {
         },
         customBackend: {
           "localhost:25500 本地版": "http://localhost:25500/sub?",
+	  "subapi.acgnc.cc(acgnc.cc提供)": "https://subapi.acgnc.cc/sub?",
           "sub-beta.vercel.app": "https://sub-beta.vercel.app/sub?",
           "subcon.dlj.tf(subconverter作者提供-稳定)":
             "https://subcon.dlj.tf/sub?",
@@ -265,6 +266,7 @@ export default {
         },
         backendOptions: [
           { value: "http://localhost:25500/sub?" },
+	  { value: "https://subapi.acgnc.cc/sub?" },
           { value: "https://sub-beta.now.sh/sub?" },
           { value: "https://subcon.dlj.tf/sub?" },
           { value: "https://api.dler.io/sub?" },
@@ -553,7 +555,7 @@ export default {
   },
   mounted() {
     this.form.clientType = "clash";
-    this.form.customBackend = defaultBackend;
+    this.form.customBackend = "https://subapi.acgnc.cc/sub?";
     this.form.remoteConfig = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini";
     this.getBackendVersion();
   },
